@@ -18,8 +18,8 @@ struct StackLayout {
   Pixel bg;
 
   StackLayout(std::vector<T > const& children, Pixel bg = Pixel{}) :
-    children{children},
-    bg{bg}
+    children(children),
+    bg(bg)
   {}
 
   template <class... Xs>
