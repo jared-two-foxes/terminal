@@ -38,7 +38,7 @@ struct StackLayout {
   	// Early out if we are empty.
     if (children.empty()) return Image();
 
-    auto const images = map(children, [maxWidth](auto const& c) {
+    auto const images = foundation::map(children, [maxWidth](auto const& c) {
   	  return c.render(maxWidth);
   	});
 

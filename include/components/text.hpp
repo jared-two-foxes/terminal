@@ -18,17 +18,17 @@ struct Text {
   template <class T>
   Text(Style const& style, T const& content) :
   	style{style},
-  	content{toString(content)}
+  	content{foundation::toString(content)}
   {}
 
   template <class T>
   Text(T const& content) :
     style{Style{}},
-    content{toString(content)}
+    content{foundation::toString(content)}
   {}
 
   Image render(unsigned const maxWidth) const {
-  	auto const lines = split(reflow(maxWidth, content), "\n");
+  	auto const lines = foundation::split(reflow(maxWidth, content), "\n");
   	auto const height = lines.size();
   	auto const width = std::max_element(
   	  lines.begin(),
