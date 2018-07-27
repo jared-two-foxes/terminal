@@ -1,11 +1,12 @@
 #ifndef FRAMEWORK_COMPONENTS_FLOWLAYOUT_HPP
 #define FRAMEWORK_COMPONENTS_FLOWLAYOUT_HPP
 
-#include <framework/terminal/image.hpp>
-#include <framework/terminal/components/component.hpp>
-#include <framework/terminal/util.hpp>
-#include <framework/terminal/style.hpp>
-#include <framework/terminal/reflow.hpp>
+#include <terminal/image.hpp>
+#include <terminal/components/component.hpp>
+#include <terminal/util.hpp>
+#include <terminal/style.hpp>
+#include <terminal/reflow.hpp>
+
 #include <algorithm>
 
 namespace framework {

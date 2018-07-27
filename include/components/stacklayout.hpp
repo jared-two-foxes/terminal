@@ -1,11 +1,11 @@
 #ifndef FRAMEWORK_COMPONENTS_STACKLAYOUT_HPP__
 #define FRAMEWORK_COMPONENTS_STACKLAYOUT_HPP__
 
-#include <framework/terminal/image.hpp>
-#include <framework/terminal/components/component.hpp>
-#include <framework/terminal/style.hpp>
-#include <framework/terminal/reflow.hpp>
-#include <framework/terminal/util.hpp>
+#include <terminal/image.hpp>
+#include <terminal/components/component.hpp>
+#include <terminal/style.hpp>
+#include <terminal/reflow.hpp>
+#include <terminal/util.hpp>
 
 #include <algorithm>
 #include <numeric>

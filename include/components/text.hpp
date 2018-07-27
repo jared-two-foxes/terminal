@@ -1,10 +1,10 @@
 #ifndef FRAMEWORK_TEXT_HPP__
 #define FRAMEWORK_TEXT_HPP__
 
-#include <framework/terminal/image.hpp>
-#include <framework/terminal/util.hpp>
-#include <framework/terminal/reflow.hpp>
-#include <framework/terminal/style.hpp>
+#include <terminal/image.hpp>
+#include <terminal/util.hpp>
+#include <terminal/reflow.hpp>
+#include <terminal/style.hpp>
 
 #include <algorithm>
 #include <string>
@@ -31,7 +31,7 @@ struct Text {
   	auto const lines = split(reflow(maxWidth, content), "\n");
   	auto const height = lines.size();
   	auto const width = std::max_element(
-  	  lines.begin(), 
+  	  lines.begin(),
   	  lines.end(),
   	  [](auto const& a, auto const& b) {
   	  	return a.size() < b.size();

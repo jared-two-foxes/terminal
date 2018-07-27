@@ -1,8 +1,9 @@
 #ifndef FRAMEWORK_COMPONENTS_MAXWIDTH_HPP
 #define FRAMEWORK_COMPONENTS_MAXWIDTH_HPP
 
-#include <framework/terminal/image.hpp>
-#include <framework/terminal/components/component.hpp>
+#include <terminal/image.hpp>
+#include <terminal/components/component.hpp>
+
 #include <cmath>
 #include <functional>
 

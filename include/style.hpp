@@ -1,7 +1,7 @@
 #ifndef FRAMEWORK_STYLE_HPP__
 #define FRAMEWORK_STYLE_HPP__
 
-#include <framework/terminal/util.hpp>
+#include <terminal/util.hpp>
 
 #include <string>
 #include <algorithm>

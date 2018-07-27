@@ -4,11 +4,11 @@
 #include <string>
 #include <vector>
 
-#include <framework/terminal/pixel.hpp>
-#include <framework/terminal/style.hpp>
+#include <terminal/pixel.hpp>
+#include <terminal/style.hpp>
 
 namespace framework {
-	
+
 struct Image {
   std::vector<Pixel > pixels;
   unsigned width;

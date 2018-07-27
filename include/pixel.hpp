@@ -2,7 +2,7 @@
 #define FRAMEWORK_PIXEL_HPP__
 
 #include <string>
-#include <framework/terminal/style.hpp>
+#include <terminal/style.hpp>
 
 namespace framework {
 
@@ -12,7 +12,7 @@ struct Pixel {
 
   std::string toString() const {
     return style.toString() + c;
-  }	
+  }
 };
 
 }

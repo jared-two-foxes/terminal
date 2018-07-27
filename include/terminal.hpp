@@ -1,7 +1,7 @@
 #ifndef FRAMEWORK_TERMINAL_HPP__
 #define FRAMEWORK_TERMINAL_HPP__
 
-#include <framework/terminal/util.hpp>
+#include <terminal/util.hpp>
 
 #include <algorithm>
 #include <iostream>

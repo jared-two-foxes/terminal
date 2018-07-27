@@ -1,8 +1,8 @@
 #ifndef FRAMEWORK_COMPONENT_HPP__
 #define FRAMEWORK_COMPONENT_HPP__
 
-#include <framework/terminal/image.hpp>
-#include <framework/terminal/components/text.hpp>
+#include <terminal/image.hpp>
+#include <terminal/components/text.hpp>
 
 #include <string>
 #include <memory>
