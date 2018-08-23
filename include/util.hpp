@@ -7,10 +7,13 @@
 #include <string>
 #include <vector>
 
-// #define ESC "\x1b"
-// #define CSI "\x1b["
-#define ESC "\e"
-#define CSI "\e["
+#ifdef _WIN32
+ 	#define ESC "\x1b"
+ 	#define CSI "\x1b["
+#else
+	#define ESC "\e"
+	#define CSI "\e["
+#endif
 
 namespace framework {
 
