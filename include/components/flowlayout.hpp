@@ -7,27 +7,29 @@
 #include <terminal/style.hpp>
 #include <terminal/reflow.hpp>
 
+#include <foundation/base/functional.hpp>
+
 #include <algorithm>
 
 namespace framework {
 
 template<class T = Component>
 struct FlowLayout {
-  std::vector<T> children;
+  std::vector<T > children;
   Pixel bg;
 
-  FlowLayout(std::vector<T> const& children, Pixel bg = Pixel{})
+  FlowLayout(std::vector<T > const& children, Pixel bg = Pixel{})
     : children(children)
     , bg{bg}
   {}
 
-  template<class...Xs>
+  template<class...Xs >
   FlowLayout(Xs const&...xs)
     : children{xs...}
     , bg{Pixel{}}
   {}
 
-  template<class...Xs>
+  template<class...Xs >
   FlowLayout(Pixel const& bg, Xs const&...xs)
     : children{xs...}
     , bg{bg}
@@ -35,16 +37,18 @@ struct FlowLayout {
 
   Image render(unsigned const maxWidth) const {
 
-    auto const images = foundation::map(children, [maxWidth](auto const& c) {
+    auto fn = [maxWidth](auto const& c) {
       auto const image = c.render(maxWidth);
       return image;
-    });
+    };
+
+    auto const images = foundation::map( fn, children );
 
     unsigned width = 0;
     unsigned x = 0;
     unsigned curHeight = 0;
-    std::vector<unsigned> xs;
-    std::vector<unsigned> ys;
+    std::vector<unsigned > xs;
+    std::vector<unsigned > ys;
     unsigned y = 0;
 
     for (auto const& image : images) {

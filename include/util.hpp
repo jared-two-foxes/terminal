@@ -1,7 +1,8 @@
 #ifndef FRAMEWORK_TERMINAL_UTIL_HPP__
 #define FRAMEWORK_TERMINAL_UTIL_HPP__
 
-#include <foundation/string_helper.hpp>
+#include <foundation/strings/split.hpp>
+#include <foundation/strings/utils.hpp>
 
 #include <algorithm>
 #include <string>
