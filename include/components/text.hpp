@@ -6,6 +6,8 @@
 #include <terminal/reflow.hpp>
 #include <terminal/style.hpp>
 
+#include <foundation/logger.hpp>
+
 #include <algorithm>
 #include <string>
 
@@ -30,12 +32,9 @@ struct Text {
   Image render(unsigned const maxWidth) const {
   	auto const lines = foundation::split(reflow(maxWidth, content), "\n");
   	auto const height = lines.size();
-  	auto const width = std::max_element(
-  	  lines.begin(),
-  	  lines.end(),
-  	  [](auto const& a, auto const& b) {
-  	  	return a.size() < b.size();
-  	  })->size();
+    auto const widest_element = std::max_element( lines.begin(), lines.end(),
+  	  [](auto const& a, auto const& b) { return a.size() < b.size(); });
+    auto const width = widest_element != lines.end() ? widest_element->size() : 0;
 
   	auto image = Image::create(width, height, Pixel{'\0', style});
   	unsigned y = 0;
