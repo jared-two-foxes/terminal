@@ -7,6 +7,8 @@
 #include <terminal/reflow.hpp>
 #include <terminal/util.hpp>
 
+#include <foundation/base/functional.hpp>
+
 #include <algorithm>
 #include <numeric>
 

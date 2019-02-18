@@ -2,6 +2,7 @@
 #define FRAMEWORK_TERMINAL_HPP__
 
 #include <terminal/util.hpp>
+#include <foundation/logger/logger.hpp>
 
 #include <algorithm>
 #include <iostream>
@@ -73,7 +74,7 @@ public:
 		return { buffer + s };
 	}
 
-	terminal flip( std::string const& next ) {
+	terminal flip( std::string const& next ) const {
 		auto const& transition = computeTransition( next );
 		if ( transition == "" ) {
 			return *this;
@@ -88,11 +89,12 @@ private:
 		buffer( str )
 	{}
 
-	std::string computeTransition( std::string const& next ) {
+	std::string computeTransition( std::string const& next ) const {
 		if (buffer == next) {
 			return "";
 		}
 		unsigned const n = std::count( buffer.begin(), buffer.end(), '\n' );
+		Log( 0, "Going to clear %i lines", n );
 		return clearLines(n) + CSI"0m" + next;
 	}
 };

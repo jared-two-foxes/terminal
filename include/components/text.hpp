@@ -6,8 +6,6 @@
 #include <terminal/reflow.hpp>
 #include <terminal/style.hpp>
 
-#include <foundation/logger.hpp>
-
 #include <algorithm>
 #include <string>
 
