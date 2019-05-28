@@ -94,7 +94,7 @@ private:
 			return "";
 		}
 		unsigned const n = std::count( buffer.begin(), buffer.end(), '\n' );
-		Log( 0, "Going to clear %i lines", n );
+		Log( 0, "Going to clear %i lines\n", n );
 		return clearLines(n) + CSI"0m" + next;
 	}
 };
